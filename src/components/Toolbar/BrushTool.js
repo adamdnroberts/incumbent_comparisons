@@ -4,14 +4,10 @@ import Tool from "./Tool";
 
 export default class BrushTool extends Tool {
     constructor(brush) {
-        const img_data = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAABXUlEQVR4Ae3ZEXT" +
-            "DYBiF4UGhUBgMCoNBoVAYDmrDQGFQrNNwfgrDwnBQKASCxcEgEJxTITAMFAPfXgj1bH/W5Kev957z+Dmv3itN0zRN0zRNu6QNsUSBPR" +
-            "JozUbIYSc2OJ3ihCMpTjiS4oQjKU5Yojhhe8UJKxQnbKk4f8swgJMpjuIojuIojuIojuIojuIojuIojuIojuIojuI43afihPeEOlocRQ" +
-            "rHUaRwHEUKx1EkV3EesEGBQyPHGrMOkdzEmeAD1iLFuD2SrzhzVLB/KjFtiZR6iTPFEXamEmO4XwHrKIXrJbCeZnC7HaynNdyuhPWUw+0"+
-            "sggNc7hYWQQmXe4RFUMDl3mERZHC3e9SwCFZwtTm+YRHUuPEQZYQ5UlhEb3CxDBZZhbEumt/VSOBqA+xgETzD7VaoYB0csYD7XeP1zFBb"+
-            "3OGiNsQCW3yhhjVK5HjBBJqmaZqmaZrmcz/pIiIIU7ugBgAAAABJRU5ErkJggg==";
-        const icon = html`<img src="${img_data}" alt="Brush" 
-            style="display: inline-block; height: 26px !important; z-index: 100;"></img>`;
+        const icon = html`<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+            style="display: inline-block; height: 26px; z-index: 100;">
+            <path d="M2 2 L17 12 L12 13 L16 22 L10 14 L6 18 Z" fill="currentColor"></path>
+        </svg>`;
         super("brush", "Draw", icon);
         this.brush = brush;
         this.options = new BrushToolOptions(brush);
