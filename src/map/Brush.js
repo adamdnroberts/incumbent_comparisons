@@ -3,12 +3,16 @@ import { bindAll } from "../utils";
 
 export default class Brush extends HoverWithRadius {
     constructor(layer, radius, color) {
-        super(layer, radius);
+        super(layer, 1); //hardcode radius to 1
 
         this.color = color;
         this.locked = false;
 
-        this.listeners = { colorend: [], colorfeature: [], mouseup: [] };
+        this.listeners = {
+            colorend: [],
+            colorfeature: [],
+            mouseup: []
+        };
 
         bindAll(["onClick", "onTouchEnd"], this);
     }
@@ -32,9 +36,8 @@ export default class Brush extends HoverWithRadius {
         if (this.locked && !this.erasing) {
             this._colorFeatures(
                 feature =>
-                    feature.state.color === null ||
-                    feature.state.color === undefined
-            );
+                feature.state.color === null ||
+                feature.state.color === undefined);
         } else {
             this._colorFeatures(feature => feature.state.color !== this.color);
         }
