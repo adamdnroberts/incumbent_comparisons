@@ -4,7 +4,7 @@ import Tool from "./Tool";
 
 export default class BrushTool extends Tool {
     constructor(brush) {
-        const icon = html `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        const icon = html`<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
             style="display: inline-block; height: 26px; z-index: 100;">
             <path d="M2 2 L17 12 L12 13 L16 22 L10 14 L6 18 Z" fill="currentColor"></path>
         </svg>`;
@@ -37,6 +37,6 @@ class BrushToolOptions {
         this.renderToolbar();
     }
     render() {
-        return html ''; //`${BrushSlider(this.brush.radius, this.changeRadius)}`;
+        return html``; //`${BrushSlider(this.brush.radius, this.changeRadius)}`;
     }
 }
