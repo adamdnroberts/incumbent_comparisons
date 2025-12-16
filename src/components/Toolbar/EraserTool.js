@@ -1,5 +1,5 @@
 import { html } from "lit-html";
-import BrushSlider from "./BrushSlider";
+//import BrushSlider from "./BrushSlider";
 import Tool from "./Tool";
 
 export default class EraserTool extends Tool {
@@ -46,10 +46,6 @@ class EraserToolOptions {
         this.renderToolbar();
     }
     render() {
-        return html`
-            ${BrushSlider(this.brush.radius, this.changeRadius, {
-                title: "Eraser Size"
-            })}
-        `;
+        return html``;
     }
 }
